@@ -164,7 +164,7 @@ static int32_t cam_actuator_i2c_modes_util(
 		rc = camera_io_dev_write_continuous(
 			io_master_info,
 			&(i2c_list->i2c_settings),
-			0);
+			CAM_SENSOR_I2C_WRITE_SEQ);
 		if (rc < 0) {
 			CAM_ERR(CAM_ACTUATOR,
 				"Failed to seq write I2C settings: %d",
@@ -175,7 +175,7 @@ static int32_t cam_actuator_i2c_modes_util(
 		rc = camera_io_dev_write_continuous(
 			io_master_info,
 			&(i2c_list->i2c_settings),
-			1);
+			CAM_SENSOR_I2C_WRITE_BURST);
 		if (rc < 0) {
 			CAM_ERR(CAM_ACTUATOR,
 				"Failed to burst write I2C settings: %d",
@@ -822,6 +822,7 @@ int32_t cam_actuator_driver_cmd(struct cam_actuator_ctrl_t *a_ctrl,
 		bridge_params.v4l2_sub_dev_flag = 0;
 		bridge_params.media_entity_flag = 0;
 		bridge_params.priv = a_ctrl;
+		bridge_params.dev_id = CAM_ACTUATOR;
 
 		actuator_acq_dev.device_handle =
 			cam_create_device_hdl(&bridge_params);
