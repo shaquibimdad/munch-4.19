@@ -6,9 +6,9 @@ export SUBARCH=arm64
 export KBUILD_COMPILER_STRING="Snapdragon Clang 10.0.9"
 
 # Path variables
-export COMPILER_PATH="/media/shaquib/kernel-dev/compiler"
-export KERNEL_PATH="/media/shaquib/kernel-dev/daemon_kernel"
-export OUTPUT_PATH="/media/shaquib/kernel-dev/outputimg"
+export COMPILER_PATH="/media/shaquib/android-dev/kernel-dev/compiler"
+export KERNEL_PATH="/media/shaquib/android-dev/kernel-dev/daemon_kernel"
+export OUTPUT_PATH="/media/shaquib/android-dev/kernel-dev/outputimg"
 
 # Compiler variables
 export CROSS_COMPILE="$COMPILER_PATH/aarch64-linux-android-4.9/bin/aarch64-linux-android-"

@@ -4,7 +4,7 @@ services:
   kramel-env:
     image: shaquibimdad/android-env-ubuntu:v2
     network_mode: "host"
-    working_dir: /media/shaquib/kernel-dev/daemon_kernel
+    working_dir: /media/shaquib/android-dev/kernel-dev/daemon_kernel
     container_name: kramel
     stdin_open: true
     tty: true
